@@ -1,0 +1,306 @@
+/* Reenitialisé le style par défault du navigateur */
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+/* END */
+
+/* STYLE DU SYTE */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+}
+
+#EnTête {
+  background-color: #222222;
+  display: flex;
+  justify-content: center;
+  padding: 30px 0px;
+
+  & > .container {
+    display: flex;
+    justify-content: space-between;
+
+    & > #mobile-nav {
+      display: none;
+      border: 1px white solid
+      ;
+      border-radius: 8px;
+      padding: 4px 8px;
+    }
+
+    & > nav {
+      display: flex;
+      gap: 32px;
+      & > a {
+        color: rgb(165, 165, 165);
+      }
+    }
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+h2,
+h3 {
+  color: #e74c3b;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+p {
+  color: black;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+footer {
+  background-color: #f74c3c;
+  padding: 100px 30px;
+
+  & > .LogoFinPage {
+    padding-left: 70px;
+    padding-top: 70px;
+  }
+}
+
+.container {
+  width: 80%;
+}
+
+.trait-horizontal-rouge {
+  width: 180px;
+  height: 1px;
+  background-color: #e74c3b;
+}
+
+.article-involved {
+  display: flex;
+  padding: 20px 40px;
+  gap: 16px;
+}
+
+
+#home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("./images/hero-image.jpg");
+  color: white;
+  padding-bottom: 50px;
+  padding-top: 50px;
+
+  & > .container {
+    gap: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    & > a {
+      background-color: #d9524f;
+      color: white;
+      border-radius: 8px;
+      padding: 8px 16px;
+    }
+    & > h1 {
+      color: white;
+      text-align: center;
+      font-size: 4rem;
+    }
+    & > p {
+      color: white;
+      text-align: center;
+    }
+  }
+}
+
+#who {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  padding-bottom: 40px;
+  padding-top: 40px;
+
+  & > .container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+}
+
+#get-involved {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f5f5;
+  padding: 64px 0px;
+
+  & > .container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+
+    & article {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+
+      & > a {
+        background-color: white;
+        color: red;
+        border: black solid 1px;
+        font-size: 16px;
+        border-radius: 4px;
+        padding: 10px 20px;
+      }
+
+      & > svg {
+        width: 124px;
+        height: 124px;
+        border-radius: 100%;
+        background-color: black;
+        fill: white;
+        padding: 16px;
+      }
+    }
+  }
+}
+
+#back-to-top {
+  width: 48px;
+  height: 48px;
+  border-radius: 100%;
+  background-color: white;
+
+  position: fixed;
+
+  bottom: 32px;
+  right: 32px;
+}
+
+/* END */
+
+/* Responsive Styling */
+
+@media (max-width: 1199px) {
+  .container {
+    width: 70%;
+  }
+}
+
+@media (max-width: 991px) {
+  p {
+    font-size: 1.2rem;
+  }
+
+  .container {
+    width: 90%;
+  }
+
+  .article-involved {
+    flex-direction: column;
+  }
+
+  #home {
+    padding-bottom: 60x;
+    padding-top: 60px;
+
+    & > .container {
+      gap: 24px;
+      & > a {
+        padding: 8px 16px;
+        font-size: 1.4rem;
+      }
+      & > h1 {
+        font-size: 2.5rem;
+      }
+    }
+  }
+
+  #who {
+    gap: 15px;
+    margin: 40px;
+    padding-bottom: 20px;
+    padding-top: 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  #EnTête {
+    & > .container {
+
+      & > #mobile-nav {
+        display: flex;
+      }
+
+
+      & > #default-nav {
+        display: none;
+      }
+    }
+
+    
+  }
+  .container {
+    width: 100%;
+  }
+
+  #EnTête {
+    padding: 32px 32px;
+  }
+
+  #home {
+    padding-bottom: 60x;
+    padding-top: 60px;
+
+    & > .container {
+      gap: 24px;
+      & > a {
+        padding: 8px 16px;
+        font-size: 1.4rem;
+      }
+      & > h1 {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  #who {
+    gap: 15px;
+    & > .container {
+      width: 100%;
+    }
+  }
+
+  p {
+    font-size: 1.3rem;
+  }
+
+  h2 {
+    font-size: 2.2rem;
+  }
+
+  h3 {
+    font-size: 1.8rem;
+  }
+}
